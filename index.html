@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Utilities</title>
+    <meta content="noindex, nofollow" name="robots">
+    <meta content="noindex, nofollow" name="googlebot">
+    <meta property="og:image" content="#" />
+    <meta property="og:image:alt" content="Rita's logo." />
+    <meta content="en_US" property="og:locale:alt">
+    <meta content="website" property="og:type">
+    <meta content="summary_large_image" property="twitter:card">
+    <link href="android-chrome-192x192.png" />
+    <link href="android-chrome-512x512.png" />
+    <link href="apple-touch-icon.png" />
+    <link href="favicon.ico" />
+    <link href="favicon-16x16.png" />
+    <link href="favicon-32x32.png" />
+    <script defer src="app.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.min.js"></script>
+    <link rel="stylesheet" href="site.css" />
+</head>
+
+<body>
+    <h1>Utilities</h1>
+    <div id="app">
+        <div class="search-wrapper">
+            <br />
+            <input type="text" v-model="keyword" placeholder="Search" />
+            <label>Search</label>
+        </div>
+        <div class="wrapper">
+            <div class="card" v-for="post in filteredList">
+                <a v-bind:href="post.link">
+                    <img v-bind:src="post.img" />
+                    <small>{{post.author}}</small>{{post.title}}
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
